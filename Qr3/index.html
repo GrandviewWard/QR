@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Redirecting...</title>
+  <style>
+    body { font-family: system-ui, sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; background: #f0f2f5; }
+    .msg { text-align: center; font-size: 1.3rem; color: #333; padding: 2rem; }
+  </style>
+</head>
+<body>
+  <div class="msg" id="msg">Redirecting...</div>
+  <script>
+    // QR Code 3
+    // Weeks 1, 3, 5 → Relief Society/Priesthood https://docs.google.com/forms/d/e/1FAIpQLSe5onJRfmKleKChASTbvY7thf-C_wb0pIWVmULabqj4C9agBw/viewform?usp=dialog
+    // Weeks 2, 4   → Sunday School https://docs.google.com/forms/d/e/1FAIpQLSc6Nymq5CszvFATFCx54TB7IW8SFi0lI5-4y0Sp3WGRsl0yng/viewform?usp=dialog
+    var now = new Date();
+    var weekOfMonth = Math.ceil(now.getDate() / 7);
+
+    if (weekOfMonth % 2 === 1) {
+      // Priesthood/Relief Society
+      window.location.replace("https://docs.google.com/forms/d/e/1FAIpQLSe5onJRfmKleKChASTbvY7thf-C_wb0pIWVmULabqj4C9agBw/viewform?usp=dialog");
+    } else {
+      // Sunday School
+      window.location.replace("https://docs.google.com/forms/d/e/1FAIpQLSc6Nymq5CszvFATFCx54TB7IW8SFi0lI5-4y0Sp3WGRsl0yng/viewform?usp=dialog");
+    }
+  </script>
+</body>
+</html>
